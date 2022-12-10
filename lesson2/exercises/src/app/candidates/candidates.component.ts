@@ -17,12 +17,21 @@ export class CandidatesComponent implements OnInit {
   ];
 
   crew = [];
-
+  
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+  addToCrew(candidate:object) {
+    if (this.crew.indexOf(candidate) === -1) {
+      this.crew.push(candidate);
+    }
+  }
+  changeMissionName(newName:string) {
+    this.missionName = newName;
+    
+  }
   // Code the addToCrew function here:
 
 
